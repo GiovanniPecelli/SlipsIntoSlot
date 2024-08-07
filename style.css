@@ -1,0 +1,445 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    color: whitesmoke;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media screen and (max-width: 430px) {
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-content img {
+        max-width: 100%; /* Assicura che l'immagine si adatti alla larghezza del suo contenitore */
+        height: auto; /* Mantiene le proporzioni originali dell'immagine */
+    }
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.526);
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Altezza al 100% della viewport */
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    overflow: hidden; /* Nasconde il contenuto che esce dai limiti */
+}
+
+.hero-background {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%; /* Larghezza massima dell'immagine */
+    max-width: 1180px;
+    min-width: 1024px;
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    position: absolute;
+    z-index: -1; /* Mette l'immagine di sfondo dietro il contenuto */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1; /* Assicura che il testo sia sopra l'immagine di sfondo */
+    margin-top: -550px;
+    text-align: center; /* Centra il testo orizzontalmente */
+}
+
+@media screen and (max-height: 664px) {
+    .hero-text {
+        margin-top: 10%;
+        margin-bottom: 570px;
+    }
+}
+
+.hero-cta {
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    color: whitesmoke;
+}
+
+.hero-content {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente il contenuto */
+}
+
+
+
+/* header della page */
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: none; /* Rimuove il background della header */
+}
+
+.logo img {
+    margin-top: 14px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    /*padding: 10px 20px; /* Aggiungi padding per spaziatura interna */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Spazio tra i bottoni */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    font-family: 'nunito';
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-text-decoration: none; /* Rimuove la sottolineatura su iOS */
+    color: whitesmoke; /* Colore del testo */
+    padding: 5px 5px;
+    border-radius: 5px; /* Angoli arrotondati */
+    transition: background-color 0.3s; /* Transizione per l'effetto hover */
+}
+
+.menu a:hover {
+    background-color: rgb(55, 55, 55); /* Colore di sfondo al passaggio del mouse */
+}
+
+.menu ul li a {
+    margin-right: 15px;
+    font-size: 15px;
+    justify-content: space-between;
+
+}
+@media screen and (max-width: 430px) {
+    .menu ul li a {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        font-size: 13px;
+    }
+}
+
+/* work-menu della page */
+
+.works-menu {
+    position: sticky;
+    top: 0;
+}
+
+.works-menu div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-menu ul {
+    padding: 0%;
+    margin-top: 40px;
+    list-style-type: none;
+    display: flex;
+    /*background: linear-gradient(0deg, rgba(0,0,0,1) 64%, rgba(0,0,0,0.7231267507002801) 83%, rgba(204,204,204,0) 100%);*/
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 624px) {
+    .works-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        /*background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(190,190,190,0.8211659663865546) 62%, rgba(0,0,0,1) 100%);*/
+    }
+}
+
+.works-menu ul li {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+
+.works-menu ul li a.button {
+    background-color: rgb(95, 95, 95);;
+    border-radius: 5px;
+    padding: 5px 5px;
+    text-decoration: none; /* Rimuove la sottolineatura */
+    -webkit-text-decoration: none; /* Rimuove la sottolineatura su iOS */
+    color: whitesmoke;
+    font-family: 'nunito';
+    text-transform: uppercase;
+    font-weight: 450;
+    font-size: 16px;
+    margin: auto;
+}
+
+.works-menu ul li a.button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.images {
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente le immagini */
+    margin-bottom: 24px;
+}
+
+.image-list {
+    display: flex; /* Imposta il contenitore delle immagini come flessibile */
+    flex-wrap: wrap; /* Avvolge le immagini su più righe se non ci sono spazi sufficienti */
+    justify-content: center; /* Centra orizzontalmente le immagini */
+}
+
+.image-list img {
+    width: 40%; /* Larghezza dell'immagine */
+    margin-right: 20px; /* Spazio tra le immagini */
+    margin-bottom: 5px; /* Spazio sotto le immagini */
+}
+
+@media screen and (max-width: 430px) {
+    .image-list {
+        flex-direction: column; /* Mette le immagini in colonna sotto i 430px */
+        align-items: center; /* Centra le immagini verticalmente */
+    }
+
+    .image-list img {
+        width: 100%; /* Occupa tutta la larghezza del contenitore */
+        margin-right: 0; /* Rimuove il margine a destra */
+        margin-bottom: 10px; /* Mantiene il margine sotto le immagini */
+    }
+}
+
+/* contacts section */
+
+.contacts {
+    color: whitesmoke; /* Colore del testo per contrastare con l'immagine */
+    padding: 50px 0; /* Padding per spaziatura interna */
+    margin-top: 0%;
+    align-content: center;
+    max-width: 100%;
+    position: relative;
+    z-index: -1; /* Mette l'immagine di sfondo dietro il contenuto */    
+}
+
+.contacts-content {
+    display: flex;
+    justify-content: space-around; /* Allinea gli elementi attorno al centro */
+    align-items: center; /* Centra verticalmente */
+}
+
+.contacts h2 {
+    font-size: 20px;
+    margin-left: 30%;
+    margin-bottom: 20px; /* Spaziatura inferiore per l'intestazione */
+    text-transform: uppercase;
+    font-family: 'nunito';
+}
+
+.contacts p {
+    line-height: 1.6; /* Altezza della riga per una migliore leggibilità */
+    margin-left: 30%;
+    font-family: 'nunito';
+}
+
+@media screen and (max-width: 1410px) {
+    .contacts-content {
+        flex-direction: column; /* Cambia l'orientamento degli elementi in colonna */
+        text-align: center; /* Centra il testo */
+    }
+
+    .contacts h2 {
+        margin: auto;
+    }
+
+    .contacts p {
+        margin-left: 20%; /* Rimuove il margine destro */
+        margin-right: 20%;
+        font-size: 13px;
+    }
+
+    .contacts-image img {
+        width: 100%; /* Assicura che l'immagine si adatti alla larghezza del contenitore */
+        height: auto; /* Mantiene le proporzioni originali dell'immagine */
+        max-width: 100%; /* Limita la larghezza massima all'intera larghezza dello schermo */
+        display: block; /* Assicura che l'immagine non crei spazi aggiuntivi */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente */
+    }
+    
+}
+
+.anchors {
+    visibility: hidden;
+    position: relative;
+    top: -200px;
+}
+
+/* request section */
+
+.requestContainer {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0%;
+    margin: 50px auto; /* Centra il contenitore verticalmente con uno spazio di 50px */
+    /*  padding: 20px; */
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color:whitesmoke;
+    font-family: 'nunito';
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label { /* sono le scritte sopra agli input */
+    display: block;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    font-family: 'nunito';
+    font-size: 14px;
+    
+}
+
+span {
+    font-size: 12px;
+    text-transform: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    max-width: 40%; /* Larghezza massima del 40% del contenitore */
+    min-width: 250px; /* Larghezza minima per evitare che siano troppo piccoli */
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    box-sizing: border-box; /* Include padding e bordo nella larghezza totale */
+    background-color: rgba(40, 40, 40, 0.85);
+    color: whitesmoke; /* Colore del testo */
+    font-family: 'nunito', sans-serif; /* Font del testo */
+    font-size: 14px; /* Dimensione del testo */
+    outline: none; /* Rimuove il contorno predefinito */
+    -webkit-appearance: none; /* Per rimuovere la freccia predefinita su WebKit */
+    -moz-appearance: none; /* Per rimuovere la freccia predefinita su Firefox */
+    appearance: none; /* Per rimuovere la freccia predefinita su altri browser */
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Colore del placeholder */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid whitesmoke;
+    background-color: rgba(40, 40, 40, 1);
+}
+
+button[type="submit"] {
+    text-transform: uppercase;
+    font-family: 'nunito';
+    min-width: 20px;
+    padding: 10px;
+    background-color: rgb(95, 95, 95);
+    color: whitesmoke;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto; /* Centra il pulsante orizzontalmente */
+    display: block; /* Assicura che il pulsante sia un blocco centrale */
+}
+
+button[type="submit"]:hover {
+    color: black;
+}
+
+/* Aggiunta della freccia per l'elemento select */
+select {
+    background: rgba(40, 40, 40, 0.85) url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='whitesmoke' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    padding-right: 20px; /* Riduci lo spazio per la freccia */
+    background-size: 15px; /* Dimensione dell'icona freccia */
+}
+
+.footer {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(190,190,190,0) 100%);
+    color: whitesmoke; /* Colore del testo */
+    text-align: left; /* Allinea il testo al centro */
+    margin-left: 30px;
+    padding: 0; /* Padding sopra e sotto */
+    position: fixed; /* Posiziona il footer in fondo alla pagina */
+    width: 100%; /* Larghezza del footer */
+    bottom: 0; /* Posiziona il footer in basso */
+    font-family: 'Nunito', sans-serif; /* Font del testo */
+    font-size: 14px; /* Dimensione del testo */
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0; /* Rimuove il margine */
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.back-to-top {
+    background-position: center center;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    margin-right: 50px;
+    border-width: 0;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer; /* fa vedere la mano quando si va sopra per esplicitare che sia un tasto */
+    display: none;
+}

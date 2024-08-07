@@ -1,0 +1,161 @@
+<!-- "!"> invio > base model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slips Into Slot</title>
+    <!-- importo il file css, collegandolo -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/photo_2024-04-24_15-53-58-removebg-preview.png" alt="logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a class="button" href="#About">About</a></li>
+                    <li><a class="button" href="#Request">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- landingpage -->
+
+    <!-- <section class="hero">
+        <div class="landingpage hero-content">
+            Immagine di sfondo
+            <img class="hero-background" src="C:\Users\giova\Documents\Web Development\slot\images\_210c7c2d-c9b5-4d93-9c63-3f4f9e674795.jpeg" alt="Sfondo della Hero">
+            
+            Contenuto sovrapposto
+            <div class="hero-text">
+                <h1>slips into slot</h1>
+                <h3>search for your inspiration</h3>
+                <a class="hero-cta" href="#">Discover My Works</a>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="hero">
+        <div class="hero-content">
+                <!-- Immagine di sfondo -->
+            <img class="hero-background" src="images/nuovosfondohome.png" alt="Sfondo della Hero">
+            
+                <!-- Contenuto sovrapposto -->
+            <div class="hero-text">
+                <h1>slips into slot</h1>
+                <h3>search for your inspiration</h3>
+                <a class="hero-cta" href="coming_soon.html">Discover My Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="works-menu">
+        <div class="container">
+            <ul>
+                <li><a class="button" href="coming_soon.html">gallery</a></li>
+                <li><a class="button" href="coming_soon.html">slot store</a></li>
+                <li><a class="button" href="coming_soon.html">nft</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="images">
+        <div class="image-list">
+            <img src="images/image1.png" alt="frontale">
+            <img src="images/image2.png" alt="figura vista di lato">
+        </div>
+    </section>    
+    
+    <section class="contacts">
+        <a class="anchors" id="About"></a>
+        <div class="container contacts-content">
+            <div class="contacts-about">
+                <h2>About slot</h2>
+                <p>In my art 'Slips into Slot', I represent an exploration into alternative perspectives. 
+                    <br><br>
+                    The floating bubbles in the 
+                    air are weighed down by black ink, viscous like oil, which metaphorically symbolizes self-imposed limits that 
+                    constrain our emotional experiences: slipping into the slot, entering it, conquering a new viewpoint; these are 
+                    all invitations to urge the observer to surpass these limits, cleanse themselves of the sticky oil, and float like 
+                    bubbles until they burst with emotions. Limitless sensitivity prompts reflection on possible new perspectives 
+                    that make us empathetic and aware. 
+                    <br><br>
+                    This process aims to challenge the boundaries of human understanding 
+                    and explore the deeper nuances of our existence.
+                </p>
+            </div>
+            <div class="contacts-image">
+                <img src="images/fumo.jpeg" alt="fumo">
+            </div>
+        </div>
+    </section>
+
+    <!-- section request -->
+
+    <section class="request">
+        <a class="anchor" id="Request"></a>
+        <div class="requestContainer">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="http://localhost:3000/submit-form" method="POST">
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+    
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <!-- Oggetto della richiesta -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a Subject</option>
+                        <option value="general">Information on Physical Works</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+    
+                <!-- Informazioni aggiuntive, obbligatorie per l'invio del contatto -->
+                <div class="form-group">
+                    <label for="additional">Message</label>
+                    <textarea id="additional" name="additional" rows="4" placeholder="Please specify the reason for your contact" required></textarea>
+                </div>
+    
+                <!-- Pulsante di invio -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="request.js"></script>
+    </section>
+
+    <br>
+
+    <br> <!-- spaziatura tra le section -->
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Slips into Slot copyright &copy; 2024</p>  
+            <!-- <a href="#top" class="back-to-top"> -->
+                <!-- <button id="backBtn" class="back-to-top">⇡</button> -->
+            <!-- </a> -->
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="homeScript.js"></script> <!-- va sempre prima della chiusura del body -->
+</body>
+</html>

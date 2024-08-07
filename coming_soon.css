@@ -1,0 +1,108 @@
+/* Buona usanza definire dei parametri di base tra cui quelli nel *, oltre che nel body */
+* {
+    box-sizing: border-box; /* Altezza degli elementi contiene i padding e valori definiti */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    /*font-family: 'nunito', sans-serif;*/
+    font-size: 100%;
+}
+
+body, html {
+    overflow-x: hidden; /* importante per impedire la creazione di spazi esterni allo schermo quando l'immagine viene tagliata, evitando lo scorrimento*/
+}
+
+.comingsoon {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altezza al 100% della viewport */
+    background-color: black; /* Colore di sfondo nero */
+}
+
+.comingsoon .image {
+    max-width: 70%; /* Larghezza massima dell'immagine */
+    margin-bottom: 100px; /* Spazio sotto l'immagine */
+}
+
+.comingsoon .image img {
+    width: 100%;
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    display: block; /* Imposta l'immagine come blocco */
+    margin: 0 auto; /* Centra l'immagine orizzontalmente */
+}
+
+.comingsoon .text {
+    text-align: center; /* Allinea il testo al centro */
+    color: whitesmoke; /* Colore del testo bianco */
+}
+
+.comingsoon h1 {
+    font-size: 42px; /* Dimensione del titolo */
+    font-weight: 350;
+    font-family: "UnifrakturMaguntia", cursive; /* Font del titolo */
+    margin-bottom: 20px; /* Spazio sotto il titolo */
+}
+
+.comingsoon .home {
+    font-size: 16px; /* Dimensione del bottone */
+    font-family: 'nunito';
+    padding: 10px 20px; /* Padding del bottone */
+    border: none; /* Rimuove il bordo del bottone */
+    border-radius: 5px; /* Angoli arrotondati del bottone */
+    background-color: rgb(55, 55, 55); /* Colore di sfondo del bottone */
+    color: whitesmoke; /* Colore del testo del bottone */
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s; /* Transizione colore di sfondo al passaggio del mouse */
+}
+
+.comingsoon .home:hover {
+    background-color: rgba(55, 55, 55, 0.8); /* Colore di sfondo del bottone al passaggio del mouse */
+}
+
+@media screen and (max-width: 1260px) {
+    .comingsoon {
+        flex-direction: column; /* Cambia il layout a colonna */
+        align-items: center; /* Centra verticalmente */
+    }
+
+    .comingsoon .image {
+        overflow: hidden; /*cioè quello che va fuori dallo schermo visibile viene tagliato*/
+        min-width: 700px;
+        margin-top: -200px;
+        max-width: 70%; /* Larghezza massima dell'immagine */
+        margin-bottom: 20px; /* Spazio sotto l'immagine */
+        position: relative;
+    }
+
+    .comingsoon .image img {
+        width: 100%;
+        height: auto; /* Altezza automatica per mantenere le proporzioni */
+        display: block; /* Imposta l'immagine come blocco */
+        margin: 0 auto; /* Centra l'immagine orizzontalmente */
+        position: relative; /* Posizionamento relativo all'interno del contenitore */
+        top: 50%; /* Sposta l'immagine verso il basso di metà dell'altezza */
+        transform: translateY(-50%); /* Riallinea verticalmente l'immagine */
+    }
+
+    .comingsoon .text {
+        text-align: center; /* Allinea il testo al centro */
+        color: whitesmoke; /* Colore del testo bianco */
+        margin-top: none; /* Spazio sopra il testo */
+    }
+
+    .comingsoon h1 {
+        font-size: 36px; /* Dimensione del titolo */
+        margin-bottom: 10px; /* Spazio sotto il titolo */
+    }
+
+    .comingsoon .home {
+        font-size: 14px; /* Dimensione del bottone */
+        padding: 8px 16px; /* Padding del bottone */
+    }
+}
